@@ -363,3 +363,33 @@ with col2:
 # Afficher l'heure actuelle simulée
 st.markdown(f"<div style='text-align:center; color:gray; font-size:0.8rem;'>Dernière mise à jour: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}</div>", unsafe_allow_html=True)
 
+# Chargement de l'image de présentation
+image = Image.open("A_2D_vector_illustration_digital_graphic_features_.png")
+
+st.set_page_config(
+    page_title="ContentOptimizer AI",
+    page_icon="🧠",
+    layout="centered"
+)
+
+st.image(image, use_column_width=True)
+st.title("🧠 ContentOptimizer AI")
+st.subheader("Optimisez votre contenu comme un pro avec l'IA")
+
+st.markdown("""
+Bienvenue sur **ContentOptimizer AI** — votre outil intelligent pour :
+- Générer du contenu SEO-friendly
+- Optimiser vos titres et mots-clés
+- Améliorer la lisibilité de vos textes
+- Exporter vos textes au format `.docx` en un clic
+""")
+
+st.markdown("### 🚀 Commencez dès maintenant avec les outils ci-dessous :")
+
+st.page_link("pages/01_Generateur_de_contenu.py", label="📝 Générateur de contenu")
+st.page_link("pages/02_Analyse_de_mots_cles.py", label="🔍 Analyse de mots-clés")
+st.page_link("pages/03_Optimisation_de_titres.py", label="✏️ Optimisation de titres")
+st.page_link("pages/04_Verificateur_de_lisibilite.py", label="📖 Vérificateur de lisibilité")
+
+st.markdown("---")
+st.markdown("💡 *Propulsé par Streamlit, OpenAI, et l'amour du contenu bien rédigé.*")
