@@ -7,6 +7,7 @@ import json
 import time
 import re
 from datetime import datetime
+from PIL import Image
 
 # Configuration de l'application
 st.set_page_config(page_title="ContentOptimizer AI", page_icon="💡", layout="wide")
@@ -28,7 +29,9 @@ st.markdown('<h1 class="main-header">ContentOptimizer AI</h1>', unsafe_allow_htm
 st.markdown('<h2 class="sub-header">Optimisez votre contenu pour les moteurs de recherche et maximisez votre impact en ligne</h2>', unsafe_allow_html=True)
 
 # Sidebar pour la navigation
-st.sidebar.image("https://via.placeholder.com/150x150.png?text=Logo", use_container_width=True)
+# st.sidebar.image("https://via.placeholder.com/150x150.png?text=Logo", use_container_width=True)
+image = Image.open('image_app.jpg')
+st.image(image, use_container_width=True)
 st.sidebar.title("Navigation")
 page = st.sidebar.radio("Choisissez un outil:", ["Générateur de contenu SEO", "Analyse de mots-clés", "Optimisation de titres", "Vérificateur de lisibilité"])
 
