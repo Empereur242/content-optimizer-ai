@@ -362,3 +362,13 @@ with col2:
 
 # Afficher l'heure actuelle simulée
 st.markdown(f"<div style='text-align:center; color:gray; font-size:0.8rem;'>Dernière mise à jour: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}</div>", unsafe_allow_html=True)
+
+import streamlit as st
+
+# Lire le fichier HTML
+with open("index.html", "r", encoding="utf-8") as file:
+    html_content = file.read()
+
+# Afficher le HTML dans Streamlit
+st.title("ContentOptimizer AI")
+st.components.v1.html(html_content, height=600)
